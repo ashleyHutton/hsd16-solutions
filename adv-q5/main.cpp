@@ -9,19 +9,33 @@
 
 int main(){
 	int trip = 3;
-	int wood = 5;
+	int sand = 5;
 	int lost = 10;
-	
-	std::string member[100];
-	int counter=0;
-	while (std::cin >> member[counter]){
-		counter++;
-	}
-	// each index will represent the time taken for each member
-	int timeTaken[counter];
-	for (int i=0; i<counter; i++){
-		
-	} 
+	int maxTravelTimeIndex = 0;
+	int travelTime[100];
 
-	
+	std::string paths[100];
+	int size=0;	
+	while (std::cin >> paths[size]){
+		size++;
+	}
+	for (int i=0; i<size; i++){
+		travelTime[i] = 30;
+		for (int j=0; j<paths[i].length(); j++){
+			if (paths[i][j] == 'T'){
+				travelTime[i] += trip;
+			}
+			else if (paths[i][j] == 'Q'){
+				travelTime[i] += sand;
+			}
+			else {
+				travelTime[i] += lost;
+			}	
+		}
+		if (travelTime[i] > travelTime[maxTravelTimeIndex]){
+			maxTravelTimeIndex = i;
+		}
+	} 
+	std::cout << maxTravelTimeIndex + 1 << "\n";
+	std::cout << travelTime[maxTravelTimeIndex];
 }
