@@ -19,7 +19,7 @@ int main(){
 	while (std::cin >> paths[size]){
 		size++;
 	}
-	for (i=0; i<size; i++){
+	for (int i=0; i<size; i++){
 		travelTime[i] = 30;
 		for (unsigned j=0; j<paths[i].length(); j++){
 			if (paths[i][j] == 'T'){
