@@ -19,9 +19,9 @@ int main(){
 	while (std::cin >> paths[size]){
 		size++;
 	}
-	for (unsigned i=0; i<size; i++){
+	for (i=0; i<size; i++){
 		travelTime[i] = 30;
-		for (int j=0; j<paths[i].length(); j++){
+		for (unsigned j=0; j<paths[i].length(); j++){
 			if (paths[i][j] == 'T'){
 				travelTime[i] += trip;
 			}
