@@ -15,7 +15,7 @@ int main(){
 	while (std::cin >> names[size]){
 		size++;
 	}
-	for (int i=0; i<=size; i++){
+	for (int i=0; i<size; i++){
 		// if the index is even, that indicates a first name, so print
 		if (i%2 == 0){
 			std::cout << "Hello, " << names[i] << "!\n";
