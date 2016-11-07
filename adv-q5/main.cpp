@@ -11,7 +11,7 @@ int main(){
 	int trip = 3;
 	int sand = 5;
 	int lost = 10;
-	int maxTravelTimeIndex = 0;
+	int minTravelTimeIndex = 0;
 	int travelTime[100];
 
 	std::string paths[100];
@@ -32,10 +32,10 @@ int main(){
 				travelTime[i] += lost;
 			}	
 		}
-		if (travelTime[i] > travelTime[maxTravelTimeIndex]){
-			maxTravelTimeIndex = i;
+		if (travelTime[i] < travelTime[minTravelTimeIndex]){
+			minTravelTimeIndex = i;
 		}
 	} 
-	std::cout << maxTravelTimeIndex + 1 << "\n";
-	std::cout << travelTime[maxTravelTimeIndex];
+	std::cout << minTravelTimeIndex + 1 << "\n";
+	std::cout << travelTime[minTravelTimeIndex];
 }
